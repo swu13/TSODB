@@ -79,16 +79,10 @@ Data download and preprocessing pipeline for Spatial Transcriptomics (ST), 10x V
 ###### 2. SlideseqProcessing
 Data download and preprocessing pipeline for Slide-seq datasets.
 
-
-| Script                    | Description                                                       |
-
-| ------------------------- | ----------------------------------------------------------------- |
-
-| `sTSlide.sh`              | Data download and preprocessing for Slide-seq datasets.           |
-
+| Script | Description |
+|---------|-------------|
+| `sTSlide.sh` | Data download and preprocessing for Slide-seq datasets.  |
 | `biomart_humna_mouse.txt` | Human-mouse gene symbol conversion table downloaded from BioMart. |
-
-
 
 ---
 
@@ -97,43 +91,25 @@ Data download and preprocessing pipeline for Slide-seq datasets.
 ###### 3. GeoMxProcessing
 
 Data download and preprocessing pipeline for GeoMx DSP datasets.
-
-
-
-| Script       | Description                                             |
-
-| ------------ | ------------------------------------------------------- |
-
-| `sTGeoMx.sh` | Data download and preprocessing for GeoMx DSP datasets. |
-
-
+| Script | Description |
+|---------|-------------|
+| `sTGeoMx.sh` | Data download and preprocessing for GeoMx DSP datasets.  |
 
 ---
-
-
 
 ###### 4. SPprocessing
 
-
-
 Data download and preprocessing pipeline for spatial proteomics datasets.
 
-| Script                      | Description                                                                                                            |
-
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-
-| `*.sh`                      | Download and preprocessing scripts for individual spatial proteomics platforms, including manual cell type annotation. |
-
-| `DownloadSynapse.py`        | Download datasets stored in Synapse.                                                                                   |
-
-| `spcellannotation_astir.py` | Cell type annotation using ASTIR.                                                                                      |
-
-| `spSampleDivision.py`       | Divide spatial proteomics data into individual slides.                                                                 |
-
+| Script | Description |
+|---------|-------------|
+| `*.sh` | Download and preprocessing scripts for individual spatial proteomics platforms, including manual cell type annotation. |
+| `sTVisiumHD.sh` | Data download and preprocessing for Visium HD datasets. |
+| `DownloadSynapse.py` | Download datasets stored in Synapse. |
+| `spcellannotation_astir.py` | Cell type annotation using ASTIR. |
+| `spSampleDivision.py` | Divide spatial proteomics data into individual slides. |
 
 ---
-
-
 
 ##### Part II. Data Annotation and Downstream Analysis
 
@@ -141,120 +117,64 @@ Data download and preprocessing pipeline for spatial proteomics datasets.
 
 Annotation pipeline for Spatial Transcriptomics (ST), 10x Visium and Visium HD datasets.
 
-
-
-| Script                       | Description                                                                                                                         |
-
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-
-| `STVisiumPipeline.sh`        | Main analysis pipeline.                                                                                                             |
-
-| `SpaCETdeconvolution.R`      | Cell type deconvolution using SpaCET.                                                                                               |
-
-| `*revised.R`                 | Revised functions in SpaCET and SPATA2 to improve compatibility across datasets.                                                    |
-
-| `SpaCETtumor.R`              | Identification of tumor, interface and stromal regions, and tumor subclusters using SpaCET.                                         |
-
-| `SpaCCcolocalization.R`      | Cell enrichment analysis using the median method and cell-cell interactions using MistyR.                                           |
-
-| `sTcellinteraction.py`       | Ligand-receptor interaction analysis using stLearn.                                                                                 |
-
-| `SpatialCCIDiff.R`           | Differential ligand-receptor interactions among different regions.                                                                  |
-
-| `SpatialTrajectoryGene.R`    | Differential gene expression analysis along tumor-interface-stromal directions and identification of enriched genes in each region. |
-
-| `SpatialTrajectoryPathway.R` | Differential pathway activities along tumor-interface-stromal directions and identification of activated pathways in each region.   |
-
-
+| Script | Description |
+|---------|-------------|
+| `STVisiumPipeline.sh` | Main analysis pipeline. |
+| `SpaCETdeconvolution.R` | Cell type deconvolution using SpaCET. |
+| `*revised.R` | Revised functions in SpaCET and SPATA2 to improve compatibility across datasets. |
+| `SpaCETtumor.R` | Identification of tumor, interface and stromal regions, and tumor subclusters using SpaCET. |
+| `SpaCCcolocalization.R` | Cell enrichment analysis using the median method and cell-cell interactions using MistyR. |
+| `sTcellinteraction.py` | Ligand-receptor interaction analysis using stLearn. |
+| `SpatialCCIDiff.R` | Differential ligand-receptor interactions among different regions. |
+| `SpatialTrajectoryGene.R` | Differential gene expression analysis along tumor-interface-stromal directions and identification of enriched genes in each region. |
+| `SpatialTrajectoryPathway.R` | Differential pathway activities along tumor-interface-stromal directions and identification of activated pathways in each region. |
 
 ---
-
-
 
 ###### 2. SlideseqAnnotation
 
 Annotation pipeline for Slide-seq datasets.
 
-
-| Script                       | Description                                                                                                            |
-
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-
-| `STSlideseqPipeline.sh`      | Main analysis pipeline.                                                                                                |
-
-| `SpaCETdeconvolution.R`      | Cell type deconvolution using SpaCET.                                                                                  |
-
-| `*revised.R`                 | Revised functions in SpaCET and SPATA2.                                                                                |
-
-| `sTSlideTumor.R`             | Identification of tumor, interface and stromal regions using neighborhood analysis and tumor subclusters using SpaCET. |
-
-| `sTSlideColocalization.py`   | Cell enrichment analysis and cell-cell colocalization analysis using Squidpy.                                          |
-
-| `sTcellinteraction.py`       | Ligand-receptor interaction analysis using stLearn.                                                                    |
-
-| `SpatialCCIDiff.R`           | Differential ligand-receptor interactions among regions.                                                               |
-
-| `SpatialTrajectoryGene.R`    | Differential gene expression analysis along spatial trajectories.                                                      |
-
-| `SpatialTrajectoryPathway.R` | Differential pathway activity analysis along spatial trajectories.                                                     |
-
-
+| Script | Description |
+|---------|-------------|
+| `STSlideseqPipeline.sh` | Main analysis pipeline. |
+| `SpaCETdeconvolution.R` | Cell type deconvolution using SpaCET. |
+| `*revised.R` | Revised functions in SpaCET and SPATA2 to improve compatibility across datasets. |
+| `sTSlideTumor.R` | Identification of tumor, interface and stromal regions using neighborhood analysis and tumor subclusters using SpaCET. |
+| `sTSlideColocalization.py` | Cell enrichment analysis and cell-cell colocalization analysis using Squidpy. |
+| `sTcellinteraction.py` | Ligand-receptor interaction analysis using stLearn. |
+| `SpatialCCIDiff.R` | Differential ligand-receptor interactions among different regions. |
+| `SpatialTrajectoryGene.R` | Differential gene expression analysis along tumor-interface-stromal directions and identification of enriched genes in each region. |
+| `SpatialTrajectoryPathway.R` | Differential pathway activities along tumor-interface-stromal directions and identification of activated pathways in each region. |
 
 ---
-
-
 
 ###### 3. GeoMxAnnotation
 
 Annotation pipeline for GeoMx DSP datasets.
 
-
-
-| Script                   | Description                                                                                                                            |
-
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-
-| `GeoMxPipeline.sh`       | Main analysis pipeline.                                                                                                                |
-
+| Script | Description |
+|---------|-------------|
+| `GeoMxPipeline.sh` | Main analysis pipeline. |
 | `sTGeoMxdeconvolution.R` | Cell type deconvolution in each ROI using SpatialDecon and CIBERSORT and differential cell composition analysis among clinical groups. |
-
-| `sTGeoMxGene.R`          | Differential gene expression analysis among clinical groups.                                                                           |
-
-| `sTGeoMxPathway.R`       | Differential pathway activity analysis among clinical groups.                                                                          |
-
-
+| `sTGeoMxGene.R` | Differential pathway activity analysis among clinical groups. |
+| `sTGeoMxPathway.R` | Identification of tumor, interface and stromal regions using neighborhood analysis and tumor subclusters using SpaCET. |
 
 ---
-
-
 
 ###### 4. SPannotation
 
 Annotation pipeline for spatial proteomics datasets.
 
-| Script                         | Description                                                                                                          |
-
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
-
-| `SpatialProteomicsPipeline.sh` | Main analysis pipeline.                                                                                              |
-
-| `spspatialplot.py`             | Visualization of cell type distributions across spatial locations.                                                   |
-
-| `sptumor.py`                   | Identification of tumor core, tumor boundary, stromal boundary and stromal core regions using neighborhood analysis. |
-
-| `spprotein.py`                 | Differential protein expression analysis between boundary and core regions.                                          |
-
-| `spcolocalization.py`          | Identification of enriched cell-cell colocalizations using Squidpy.                                                  |
-
-
+| Script | Description |
+|---------|-------------|
+| `SpatialProteomicsPipeline.sh` | Main analysis pipeline. |
+| `spspatialplot.py` | Visualization of cell type distributions across spatial locations. |
+| `sptumor.py` | Identification of tumor core, tumor boundary, stromal boundary and stromal core regions using neighborhood analysis. |
+| `spprotein.py` | Differential protein expression analysis between boundary and core regions. |
+| `spcolocalization.py` | Identification of enriched cell-cell colocalizations using Squidpy. |
 
 ---
-
-
-
----
-
-
 
 ##### Citation
 
