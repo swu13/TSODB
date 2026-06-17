@@ -60,50 +60,24 @@ TSODB/
 
 
 
-###### # 1. VisiumProcessing
+###### 1. VisiumProcessing
 
 
 
 Data download and preprocessing pipeline for Spatial Transcriptomics (ST), 10x Visium and Visium HD datasets.
 
 
-
-### Scripts
-
-
-
-| Script                    | Description                                                             |
-
-| ------------------------- | ----------------------------------------------------------------------- |
-
-| `sTVisium.sh`             | Data download and preprocessing for ST and Visium datasets.             |
-
-| `sTVisiumHD.sh`           | Data download and preprocessing for Visium HD datasets.                 |
-
-| `DownloadSynapse.py`      | Download datasets stored in Synapse.                                    |
-
-| `Seurat10Xtoh5.R`         | Convert 10x barcode, features and matrix files into h5 format.          |
-
+| Script | Description |
+|---------|-------------|
+| `sTVisium.sh` | Data download and preprocessing for ST and Visium datasets. |
+| `sTVisiumHD.sh` | Data download and preprocessing for Visium HD datasets. |
+| `DownloadSynapse.py` | Download datasets stored in Synapse. |
+| `Seurat10Xtoh5.R` | Convert 10x barcode, features and matrix files into h5 format. |
 | `convert_zenodo_to_10x.R` | Convert Zenodo datasets into standard 10x format and generate h5 files. |
-
-
-
-
-
 ---
 
-
-
-###### # 2. SlideseqProcessing
-
-
-
+###### 2. SlideseqProcessing
 Data download and preprocessing pipeline for Slide-seq datasets.
-
-
-
-### Scripts
-
 
 
 | Script                    | Description                                                       |
@@ -120,15 +94,9 @@ Data download and preprocessing pipeline for Slide-seq datasets.
 
 
 
-###### # 3. GeoMxProcessing
-
-
+###### 3. GeoMxProcessing
 
 Data download and preprocessing pipeline for GeoMx DSP datasets.
-
-
-
-### Scripts
 
 
 
@@ -144,17 +112,11 @@ Data download and preprocessing pipeline for GeoMx DSP datasets.
 
 
 
-###### # 4. SPprocessing
+###### 4. SPprocessing
 
 
 
 Data download and preprocessing pipeline for spatial proteomics datasets.
-
-
-
-### Scripts
-
-
 
 | Script                      | Description                                                                                                            |
 
@@ -175,17 +137,9 @@ Data download and preprocessing pipeline for spatial proteomics datasets.
 
 ##### Part II. Data Annotation and Downstream Analysis
 
-
-
-###### # 1. STVisiumAnnotation
-
-
+###### 1. STVisiumAnnotation
 
 Annotation pipeline for Spatial Transcriptomics (ST), 10x Visium and Visium HD datasets.
-
-
-
-### Scripts
 
 
 
@@ -217,16 +171,9 @@ Annotation pipeline for Spatial Transcriptomics (ST), 10x Visium and Visium HD d
 
 
 
-###### # 2. SlideseqAnnotation
-
-
+###### 2. SlideseqAnnotation
 
 Annotation pipeline for Slide-seq datasets.
-
-
-
-### Scripts
-
 
 
 | Script                       | Description                                                                                                            |
@@ -257,15 +204,9 @@ Annotation pipeline for Slide-seq datasets.
 
 
 
-###### # 3. GeoMxAnnotation
-
-
+###### 3. GeoMxAnnotation
 
 Annotation pipeline for GeoMx DSP datasets.
-
-
-
-### Scripts
 
 
 
@@ -287,17 +228,9 @@ Annotation pipeline for GeoMx DSP datasets.
 
 
 
-###### # 4. SPannotation
-
-
+###### 4. SPannotation
 
 Annotation pipeline for spatial proteomics datasets.
-
-
-
-### Scripts
-
-
 
 | Script                         | Description                                                                                                          |
 
@@ -325,27 +258,16 @@ Annotation pipeline for spatial proteomics datasets.
 
 ##### Citation
 
-
-
 If you use this repository, please cite:
-
-
 
 ```text
 
 Sijia Wu, et al. TumorSpatialOmics: A spatial omics database for cancer.Journal Name, 2026.
 
 ```
-
-
-
 ---
 
-
-
 ##### Contact
-
-
 
 For questions and suggestions, please open an issue on GitHub or contact the corresponding authors of TSODB.
 
