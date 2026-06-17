@@ -1,8 +1,8 @@
-### \# TSODB Data Processing and Annotation Pipeline
+### # TSODB Data Processing and Annotation Pipeline
 
 
 
-This repository contains all scripts used for data downloading, preprocessing, annotation, and downstream analyses in the \*\*Tumor Spatial Omics Database (TSODB)\*\*.
+This repository contains all scripts used for data downloading, preprocessing, annotation, and downstream analyses in the **Tumor Spatial Omics Database (TSODB)**.
 
 
 
@@ -10,21 +10,21 @@ TSODB integrates multiple spatial omics technologies, including:
 
 
 
-\* Spatial Transcriptomics (ST)
+* Spatial Transcriptomics (ST)
 
-\* 10x Genomics Visium
+* 10x Genomics Visium
 
-\* 10x Genomics Visium HD
+* 10x Genomics Visium HD
 
-\* Slide-seq / Slide-seqV2
+* Slide-seq / Slide-seqV2
 
-\* GeoMx Digital Spatial Profiling (DSP)
+* GeoMx Digital Spatial Profiling (DSP)
 
-\* Spatial proteomics datasets (CODEX, IMC, MIBI, mIF, etc.)
+* Spatial proteomics datasets (CODEX, IMC, MIBI, mIF, etc.)
 
 
 
-##### \# Repository Structure
+##### # Repository Structure
 
 
 
@@ -56,11 +56,11 @@ TSODB/
 
 
 
-##### \# Part I. Data Download and Preprocessing
+##### # Part I. Data Download and Preprocessing
 
 
 
-###### \## 1. VisiumProcessing
+###### ## 1. VisiumProcessing
 
 
 
@@ -68,7 +68,7 @@ Data download and preprocessing pipeline for Spatial Transcriptomics (ST), 10x V
 
 
 
-\### Scripts
+### Scripts
 
 
 
@@ -84,7 +84,7 @@ Data download and preprocessing pipeline for Spatial Transcriptomics (ST), 10x V
 
 | `Seurat10Xtoh5.R`         | Convert 10x barcode, features and matrix files into h5 format.          |
 
-| `convert\\\_zenodo\\\_to\\\_10x.R` | Convert Zenodo datasets into standard 10x format and generate h5 files. |
+| `convert\\_zenodo\\_to\\_10x.R` | Convert Zenodo datasets into standard 10x format and generate h5 files. |
 
 
 
@@ -94,7 +94,7 @@ Data download and preprocessing pipeline for Spatial Transcriptomics (ST), 10x V
 
 
 
-###### \## 2. SlideseqProcessing
+###### ## 2. SlideseqProcessing
 
 
 
@@ -102,7 +102,7 @@ Data download and preprocessing pipeline for Slide-seq datasets.
 
 
 
-\### Scripts
+### Scripts
 
 
 
@@ -112,7 +112,7 @@ Data download and preprocessing pipeline for Slide-seq datasets.
 
 | `sTSlide.sh`              | Data download and preprocessing for Slide-seq datasets.           |
 
-| `biomart\\\_humna\\\_mouse.txt` | Human-mouse gene symbol conversion table downloaded from BioMart. |
+| `biomart\\_humna\\_mouse.txt` | Human-mouse gene symbol conversion table downloaded from BioMart. |
 
 
 
@@ -120,7 +120,7 @@ Data download and preprocessing pipeline for Slide-seq datasets.
 
 
 
-###### \## 3. GeoMxProcessing
+###### ## 3. GeoMxProcessing
 
 
 
@@ -128,7 +128,7 @@ Data download and preprocessing pipeline for GeoMx DSP datasets.
 
 
 
-\### Scripts
+### Scripts
 
 
 
@@ -144,7 +144,7 @@ Data download and preprocessing pipeline for GeoMx DSP datasets.
 
 
 
-###### \## 4. SPprocessing
+###### ## 4. SPprocessing
 
 
 
@@ -152,7 +152,7 @@ Data download and preprocessing pipeline for spatial proteomics datasets.
 
 
 
-\### Scripts
+### Scripts
 
 
 
@@ -160,11 +160,11 @@ Data download and preprocessing pipeline for spatial proteomics datasets.
 
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 
-| `\\\*.sh`                      | Download and preprocessing scripts for individual spatial proteomics platforms, including manual cell type annotation. |
+| `\\*.sh`                      | Download and preprocessing scripts for individual spatial proteomics platforms, including manual cell type annotation. |
 
 | `DownloadSynapse.py`        | Download datasets stored in Synapse.                                                                                   |
 
-| `spcellannotation\\\_astir.py` | Cell type annotation using ASTIR.                                                                                      |
+| `spcellannotation\\_astir.py` | Cell type annotation using ASTIR.                                                                                      |
 
 | `spSampleDivision.py`       | Divide spatial proteomics data into individual slides.                                                                 |
 
@@ -174,11 +174,11 @@ Data download and preprocessing pipeline for spatial proteomics datasets.
 
 
 
-##### \# Part II. Data Annotation and Downstream Analysis
+##### # Part II. Data Annotation and Downstream Analysis
 
 
 
-###### \## 1. STVisiumAnnotation
+###### ## 1. STVisiumAnnotation
 
 
 
@@ -186,7 +186,7 @@ Annotation pipeline for Spatial Transcriptomics (ST), 10x Visium and Visium HD d
 
 
 
-\### Scripts
+### Scripts
 
 
 
@@ -198,7 +198,7 @@ Annotation pipeline for Spatial Transcriptomics (ST), 10x Visium and Visium HD d
 
 | `SpaCETdeconvolution.R`      | Cell type deconvolution using SpaCET.                                                                                               |
 
-| `\\\*revised.R`                 | Revised functions in SpaCET and SPATA2 to improve compatibility across datasets.                                                    |
+| `\\*revised.R`                 | Revised functions in SpaCET and SPATA2 to improve compatibility across datasets.                                                    |
 
 | `SpaCETtumor.R`              | Identification of tumor, interface and stromal regions, and tumor subclusters using SpaCET.                                         |
 
@@ -218,7 +218,7 @@ Annotation pipeline for Spatial Transcriptomics (ST), 10x Visium and Visium HD d
 
 
 
-###### \## 2. SlideseqAnnotation
+###### ## 2. SlideseqAnnotation
 
 
 
@@ -226,7 +226,7 @@ Annotation pipeline for Slide-seq datasets.
 
 
 
-\### Scripts
+### Scripts
 
 
 
@@ -238,7 +238,7 @@ Annotation pipeline for Slide-seq datasets.
 
 | `SpaCETdeconvolution.R`      | Cell type deconvolution using SpaCET.                                                                                  |
 
-| `\\\*revised.R`                 | Revised functions in SpaCET and SPATA2.                                                                                |
+| `\\*revised.R`                 | Revised functions in SpaCET and SPATA2.                                                                                |
 
 | `sTSlideTumor.R`             | Identification of tumor, interface and stromal regions using neighborhood analysis and tumor subclusters using SpaCET. |
 
@@ -258,7 +258,7 @@ Annotation pipeline for Slide-seq datasets.
 
 
 
-###### \## 3. GeoMxAnnotation
+###### ## 3. GeoMxAnnotation
 
 
 
@@ -266,7 +266,7 @@ Annotation pipeline for GeoMx DSP datasets.
 
 
 
-\### Scripts
+### Scripts
 
 
 
@@ -288,7 +288,7 @@ Annotation pipeline for GeoMx DSP datasets.
 
 
 
-###### \## 4. SPannotation
+###### ## 4. SPannotation
 
 
 
@@ -296,7 +296,7 @@ Annotation pipeline for spatial proteomics datasets.
 
 
 
-\### Scripts
+### Scripts
 
 
 
@@ -324,7 +324,7 @@ Annotation pipeline for spatial proteomics datasets.
 
 
 
-##### \# Citation
+##### # Citation
 
 
 
@@ -344,7 +344,7 @@ Sijia Wu, et al. TumorSpatialOmics: A spatial omics database for cancer.Journal 
 
 
 
-##### \# Contact
+##### # Contact
 
 
 
