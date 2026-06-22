@@ -74,6 +74,12 @@ Data download and preprocessing pipeline for Spatial Transcriptomics (ST), 10x V
 | `DownloadSynapse.py` | Download datasets stored in Synapse. |
 | `Seurat10Xtoh5.R` | Convert 10x barcode, features and matrix files into h5 format. |
 | `convert_zenodo_to_10x.R` | Convert Zenodo datasets into standard 10x format and generate h5 files. |
+| `GSE171351_expression_metadata.py` | Integrated gene expression matrix and sample metadata fromGSE171351 datasets. |
+| `GSE195575_expression_metadata.py` | Integrated gene expression matrix and sample metadata from GSE195575 datasets. |
+| `GSE159709_GSE207592_GSE263920_expression_metadata.py` | Integrated gene expression matrix and sample metadata from GSE159709, GSE207592, and GSE263920 datasets. |
+| `convert_mouse_to_human_10x.py` | Convert mouse 10x gene expression matrices to human homolog gene symbols using BioMart mappings. |
+| `GPMID39592577_Batch_ENSG2Symbol.R` | Convert Ensembl gene IDs (ENSG) to gene symbols for the PMID39592577 dataset. |
+| `extract_count_matrix.R` | Extract gene expression count matrices from CytAssist FFPE Protein Expression datasets. |
 ---
 
 ###### 2. SlideseqProcessing
