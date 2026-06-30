@@ -111,7 +111,7 @@ roi_name  = exp_raw.iloc[4,3:]
 treat     = exp_raw.iloc[5,3:]
 scan_tag  = exp_raw.iloc[6,3:]
 segment   = exp_raw.iloc[8,3:]
-group = treat + "_" + scan_tag + "_" + segment
+group = (treat + "_" + scan_tag + "_" + segment).astype(str).str.replace(",", "/")
 sample_info = pd.DataFrame({"slide": scan_name.values,"roi": roi_name.values.astype(str),"group": group.values})
 start_idx = exp_raw[exp_raw.iloc[:, 1] == "All Targets"].index[0]
 exp = exp_raw.iloc[start_idx:].copy()
@@ -123,7 +123,7 @@ meta = metadata.copy()
 meta = meta.rename(columns={meta.columns[0]: "sample", meta.columns[1]: "slide", meta.columns[3]: "Treatment", meta.columns[5]: "Scan Tag", meta.columns[7]: "roi", 
                             meta.columns[8]: "Segment Name", })
 meta = meta[meta["sample"].astype(str).str.startswith("DSP-")]
-meta["group"] = ( meta["Treatment"].astype(str) + "_" +meta["Scan Tag"].astype(str) + "_" +meta["Segment Name"].astype(str))
+meta["group"] = ( meta["Treatment"].astype(str) + "_" + meta["Scan Tag"].astype(str) + "_" + meta["Segment Name"].astype(str)).str.replace(",", "/")
 meta = meta[["sample", "group", "slide","roi"]]
 sample_info["key"] = (sample_info["slide"].astype(str) + "|" + sample_info["roi"].astype(str).str.zfill(3) + "|" + sample_info["group"].astype(str))
 meta["key"] = (meta["slide"].astype(str) + "|" + meta["roi"].astype(str).str.zfill(3) + "|" + meta["group"].astype(str))
